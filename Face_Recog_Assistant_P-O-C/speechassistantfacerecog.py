@@ -10,7 +10,7 @@ num = 1
 def assistant_speaker(output):
     global num
     num += 1
-    print("PerSon : ", output)
+    print("ET : ", output)
 
     toSpeak = gTTS(text = output, lang="en", slow = False)
 
