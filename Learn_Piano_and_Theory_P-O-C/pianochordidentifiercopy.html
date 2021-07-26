@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Piano Chord Identifier</title>
+    </head>
+<body>
+    
+    <h1>Learn Piano & Music Theory</h1>
+        <h2>Use your computer keyboard to spell out basic chords and intervals following the chart below</h2>
+ 
+        <div id="identifierbody">
+            <div id="identifierinside">
+                <p>C Major: "adg"  |  C Minor: "aeg"</p>
+                <p>D Major: "sth"  |  D Minor: "sfh"</p>
+                <p>E Major: "dyj"  |  E Minor: "dgj"</p>
+                <p>Major 3rd: "ad" | Minor 3rd: "ae"</p>
+                <p>Perfect 4th: "af"</p>
+                <p>Perfect 5th: "ag"</p>
+                <p>Major 7th: "aj"</p>
+               
+            </div>
+        </div>
+        <div id="chilight"></div>
+        <div id="csharphilight"></div>
+        <div id="dhilight"></div>
+        <div id="dsharphilight"></div>
+        <div id="ehilight"></div>
+        <div id="fhilight"></div>
+        <div id="fsharphilight"></div>
+        <div id="ghilight"></div>
+        <div id="gsharphilight"></div>
+        <div id="ahilight"></div>
+        <div id="asharphilight"></div>
+        <div id="bhilight"></div>
+        </div>
+        </div>
+        <img id="pianoimg" src=https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/PianoKeyboard.svg/2560px-PianoKeyboard.svg.png></img>
+        <div>_________________________________________</div>
+<div class="pianokeys">
+    <div data-key="65" class="pkey">
+        <kbd id="lightupCstyle">C</kbd>
+    </div>
+    <div data-key="87" class="pkey">
+        <kbd id="lightupCsharpstyle">C#/Db</kbd>
+    </div>
+    <div data-key="83" class="pkey">
+        <kbd id="lightupDstyle">D</kbd>
+    </div>
+    <div data-key="69" class="pkey">
+        <kbd id="lightupDsharpstyle">D#/Eb</kbd>
+    </div>
+
+    <div data-key="68" class="pkey">
+        <kbd id="lightupEstyle">E</kbd>
+    </div>
+    <div data-key ="70" class="pkey">
+        <kbd id="lightupFstyle">F</kbd>
+    </div>
+    <div data-key="84" class="pkey">
+        <kbd id="lightupFsharpstyle">F#/Gb</kbd>
+    </div>
+    
+    <div data-key="71" class="pkey">
+        <kbd id="lightupGstyle">G</kbd>
+    </div>
+    <div data-key="89" class="pkey">
+        <kbd id="lightupGsharpstyle">G#/Ab</kbd>
+    </div>
+
+    <div data-key="72" class="pkey">
+        <kbd id="lightupAstyle">A</kbd>
+    </div>
+    <div data-key="85" class="pkey">
+        <kbd id="lightupAsharpstyle">A#/Bb</kbd>
+    </div>
+
+    <div data-key="74" class="pkey">
+        <kbd id="lightupBstyle">B</kbd>
+    </div>
+</div>
+<div>The "A" key on your keyboard is the start of the piano (it corresponds to middle C)</div>
+<div id="author">Built by Ethan W.</div>
+<audio id="c" controls style="display:none"><source src="piano_middle_C.mp3"></audio>
+<audio id="csharp" controls style="display:none"><source src="piano_C_sharp.mp3"></audio>
+<audio id="d" controls style="display:none"><source src="piano_D.mp3"></audio>
+<audio id="dsharp" controls style="display:none"><source src="piano_D_sharp.mp3"></audio>
+<audio id="e" controls style="display:none"><source src="piano_E.mp3"></audio>
+<audio id="f" controls style="display:none"><source src="piano_F.mp3"></audio>
+<audio id="fsharp" controls style="display:none"><source src="piano_F_sharp.mp3"></audio>
+<audio id="g" controls style="display:none"><source src="piano_G.mp3"></audio>
+<audio id="gsharp" controls style="display:none"><source src="piano_G_sharp.mp3"></audio>
+<audio id="a" controls style="display:none"><source src="piano_A.mp3"></audio>
+<audio id="asharp" controls style="display:none"><source src="piano_A_sharp.mp3"></audio>
+<audio id="b" controls style="display:none"><source src="piano_B.mp3"></audio>
+
+    <style>
+        .pkey {
+            display:inline-block
+        }
+        #lightupCstyle {
+            display: none;
+            padding: 10%;
+           
+            background-color: red;
+        }
+        #lightupCsharpstyle {
+            display: none;
+            padding:10%;
+
+            background-color: rgb(255, 217, 0);
+        }
+        #lightupDstyle {
+            display: none;
+            padding: 10%;
+
+            background-color: rgb(121, 121, 230);
+        }
+        #lightupDsharpstyle {
+            display: none;
+            padding: 10%;
+
+            background-color: rgb(252, 190, 252);
+        }
+        #lightupEstyle {
+            display: none;
+            padding: 10%;
+
+            background-color:rgb(160, 250, 133);
+        }
+        #lightupFstyle {
+            display: none;
+            padding: 10%;
+
+            background-color:rgb(198, 152, 250)
+        }
+        #lightupFsharpstyle {
+            display: none;
+            padding: 10%;
+
+            background-color: orange;
+        }
+        #lightupGstyle {
+            display: none;
+            padding: 10%;
+
+            background-color: rgb(247, 60, 163);
+        }
+        #lightupGsharpstyle {
+            display: none;
+            padding: 10%;
+
+            background-color:teal;
+        }
+        #lightupAstyle {
+            display: none;
+            padding: 10%;
+
+            background-color:wheat;
+        }
+        #lightupAsharpstyle {
+            display: none;
+            padding: 10%;
+
+            background-color:yellow;
+        }
+        #lightupBstyle {
+            display: none;
+            padding: 10%;
+
+            background-color: pink;
+        }
+        #pianoimg {
+            display: block;
+            width: 23%;
+            height: 9%;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            padding:3px;
+            border-radius: 10%;
+            background-color: rgba(112, 203, 245, 0.685);
+           
+            
+          
+        }
+        h2 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 10%;
+            padding: .2px;
+            background-color:rgb(177, 200, 243);
+          
+        
+        }
+        #author {
+            font-size:small;
+            color: black;
+            padding: 15px;
+        }
+      
+        #identifierbody {
+            width: 400px;
+            height: 250px;
+            background-color: rgba(112, 203, 245, 0.685);
+            left: 41%;
+            position: absolute;
+            display: block;
+            text-align: center;
+            border-radius: 10%;
+            font-family: Arial, Helvetica, sans-serif;
+            border-color:whitesmoke;
+            color: rgb(45, 72, 145);
+            
+           
+        }
+        #chilight {
+            display: none;
+            position: fixed;
+            left:1%;
+            bottom: 55%;
+            width: 25px;
+            height: 50px;
+          
+            border-radius: 10%;
+            background-color: rgba(255, 0, 0, 0.79);
+        
+        }
+        #csharphilight {
+
+            display: none;
+            position: fixed;
+            left: 2.6%;
+            bottom: 65%;
+            width: 25px;
+            height: 50px;
+          
+            border-radius: 10%;
+            background-color: rgba(255, 217, 0, 0.79);
+        }
+        #dhilight {
+
+            display: none;
+            position: fixed;
+            left: 4.5%;
+            bottom: 55%;
+            width: 25px;
+            height: 50px;
+          
+            border-radius: 10%;
+            background-color: rgba(121, 121, 230, 0.79);
+
+        }
+        #dsharphilight {
+
+            display: none;
+            position: fixed;
+            left: 6.5%;
+            bottom: 65%;
+            width: 25px;
+            height: 50px;
+          
+            border-radius: 10%;
+            background-color: rgba(252, 190, 252, 0.79);
+
+
+        }
+        #ehilight {
+
+            display: none;
+            position: fixed;
+            left: 8%;
+            bottom: 55%;
+            width: 25px;
+            height: 50px;
+          
+            border-radius: 10%;
+            background-color: rgba(160, 250, 133, 0.79);
+
+        }
+        #fhilight {
+
+            display: none;
+            position: fixed;
+            left: 11%;
+            bottom: 55%;
+            width: 25px;
+            height: 50px;
+          
+            border-radius: 10%;
+            background-color: rgba(198, 152, 250, 0.79);
+
+        }
+        #fsharphilight {
+            display: none;
+            position: fixed;
+            left: 12.3%;
+            bottom: 65%;
+            width: 25px;
+            height: 50px;
+          
+            border-radius: 10%;
+            background-color: rgba(255, 166, 0, 0.79)
+        }
+        #ghilight {
+
+            display: none;
+            position: fixed;
+            left: 14%;
+            bottom: 55%;
+            width: 25px;
+            height: 50px;
+          
+            border-radius: 10%;
+            background-color: rgba( 247, 60, 163, 0.79);
+
+        }
+        #gsharphilight {
+            display: none;
+            position: fixed;
+            left: 16%;
+            bottom: 65%;
+            width: 25px;
+            height: 50px;
+          
+            border-radius: 10%;
+            background-color: rgba(0, 128, 128, 0.79);
+
+        }
+        #ahilight {
+            display: none;
+            position: fixed;
+            left: 17.5%;
+            bottom: 55%;
+            width: 25px;
+            height: 50px;
+          
+            border-radius: 10%;
+            background-color: rgba(245, 222, 179, 0.79);
+
+        }
+        #asharphilight {
+
+            display: none;
+            position: fixed;
+            left: 19.6%;
+            bottom: 65%;
+            width: 25px;
+            height: 50px;
+          
+            border-radius: 10%;
+            background-color: rgba(255, 255, 0, 0.79);
+
+        }
+        #bhilight {
+            display: none;
+            position: fixed;
+            left: 21%;
+            bottom: 55%;
+            width: 25px;
+            height: 50px;
+          
+            border-radius: 10%;
+            background-color: rgba(255, 192, 203, 0.79);
+
+        }
+        body {
+            background-color: rgb(255, 255, 213);
+
+        }
+
+
+        
+
+    </style>
+
+    <script>
+      
+   
+       
+      
+        
+      document.onkeydown = function(e){
+        e = e || window.event 
+        var key = e.which || e.keyCode;
+        if(key===65){
+        //console.log("pianokey c pressed");
+        var lightupckey = document.getElementById("lightupCstyle");
+        lightupckey.style.display = "block";
+        var hilightckey = document.getElementById("chilight");
+        hilightckey.style.display = "block";
+        var csound = document.getElementById("c");
+        csound.play();
+        
+        }
+        else if(key===87) {
+            //console.log("pianokey csharp pressed");
+            var lightupcsharpkey = document.getElementById("lightupCsharpstyle");
+            lightupcsharpkey.style.display = "block";
+            var hilightcsharpkey = document.getElementById("csharphilight");
+            hilightcsharpkey.style.display="block";
+            var csharpsound = document.getElementById("csharp");
+            csharpsound.play();
+        }   
+        else if(key===83) {
+            //console.log("pianokey d pressed");
+            var lightupdkey = document.getElementById("lightupDstyle");
+            lightupdkey.style.display="block";
+            var dhilightkey = document.getElementById("dhilight");
+            dhilightkey.style.display="block";
+            var dsound = document.getElementById("d");
+            dsound.play();
+        }
+        else if(key===69) {
+            //console.log("pianokey dsharp pressed");
+            var lightupdsharpkey = document.getElementById("lightupDsharpstyle");
+            lightupdsharpkey.style.display="block";
+            var hilightdsharpkey = document.getElementById("dsharphilight");
+            hilightdsharpkey.style.display="block";
+            var dsharpsound = document.getElementById("dsharp");
+            dsharpsound.play();
+        }
+        else if(key===68) {
+            //console.log("pianokey e pressed");
+            var lightupekey = document.getElementById("lightupEstyle");
+            lightupekey.style.display="block";
+            var hilightekey = document.getElementById("ehilight");
+            hilightekey.style.display="block";
+            var esound = document.getElementById("e");
+            esound.play();
+            
+        }
+        else if(key===70) {
+            //console.log("pianokey f pressed");
+            var lightupfkey = document.getElementById("lightupFstyle");
+            lightupfkey.style.display="block";
+            var hilightfkey = document.getElementById("fhilight");
+            hilightfkey.style.display="block";
+            var fsound = document.getElementById("f");
+            fsound.play();
+        }
+        else if(key===84) {
+            //console.log("pianokey fsharp pressed");
+            var lightupfsharpkey = document.getElementById("lightupFsharpstyle");
+            lightupfsharpkey.style.display="block";
+            var hilightfsharpkey = document.getElementById("fsharphilight");
+            hilightfsharpkey.style.display="block";
+            var fsharpsound = document.getElementById("fsharp");
+            fsharpsound.play();
+        }
+        else if(key===71) {
+            //console.log("pianokey g pressed");
+            var lightupgkey = document.getElementById("lightupGstyle");
+            lightupgkey.style.display="block";
+            var hilightthegkey = document.getElementById("ghilight");
+            hilightthegkey.style.display="block";
+            var gsound = document.getElementById("g");
+            gsound.play();
+        
+        }
+        else if(key===89) {
+            //console.log("pianokey gsharp pressed");
+            var lightupgsharpkey = document.getElementById("lightupGsharpstyle");
+            lightupgsharpkey.style.display="block"
+            var hilightgsharpkey = document.getElementById("gsharphilight");
+            hilightgsharpkey.style.display="block";
+            var gsharpsound = document.getElementById("gsharp");
+            gsharpsound.play();
+        }
+        else if(key===72) {
+            //console.log("pianokey a pressed");
+            var lightupakey = document.getElementById("lightupAstyle");
+            lightupakey.style.display="block";
+            var hilightakey = document.getElementById("ahilight");
+            hilightakey.style.display="block";
+            var asound = document.getElementById("a");
+            asound.play();
+        }
+        else if(key===85) {
+            //console.log("pianokey asharp pressed");
+            var lightupasharpkey = document.getElementById("lightupAsharpstyle");
+            lightupasharpkey.style.display="block";
+            var hilightasharpkey = document.getElementById("asharphilight");
+            hilightasharpkey.style.display="block";
+            var asharpsound = document.getElementById("asharp");
+            asharpsound.play();
+        }
+        else if(key===74) {
+            //console.log("pianokey b pressed");
+            var lightupbkey = document.getElementById("lightupBstyle");
+            lightupbkey.style.display="block";
+            var hilightbkey = document.getElementById("bhilight");
+            hilightbkey.style.display="block";
+            var bsound = document.getElementById("b");
+            bsound.play();
+        }
+        //chord processing function
+
+    
+}
+      document.onkeyup = function(e){
+        e = e || window.event 
+        var key = e.which || e.keyCode;
+        if(key===65){
+        console.log("pianokey c unpressed");
+        var lightupckey = document.getElementById("lightupCstyle");
+        lightupckey.style.display = "none";
+        var hilightckey = document.getElementById("chilight");
+        hilightckey.style.display = "none";
+        var csound = document.getElementById("c");
+        csound.load();
+        
+        }
+        else if(key===87){
+            console.log("pianokey csharp unpressed");
+            var lightupcsharpkey = document.getElementById("lightupCsharpstyle");
+            lightupcsharpkey.style.display = "none";
+            var hilightcsharpkey = document.getElementById("csharphilight");
+            hilightcsharpkey.style.display="none";
+            var csharpsound = document.getElementById("csharp");
+            csharpsound.load();
+
+        }
+        else if(key===83) {
+            console.log("pianokey d unpressed");
+            var lightupdkey = document.getElementById("lightupDstyle");
+            lightupdkey.style.display = "none";
+            var dhilightkey = document.getElementById("dhilight");
+            dhilightkey.style.display="none";
+            var dsound = document.getElementById("d");
+            dsound.load();
+        }
+        else if(key===69) {
+            console.log("pianokey dsharp unpressed");
+            var lightupdsharpkey = document.getElementById("lightupDsharpstyle");
+            lightupdsharpkey.style.display="none";
+            var hilightdsharpkey = document.getElementById("dsharphilight");
+            hilightdsharpkey.style.display="none";
+            var dsharpsound = document.getElementById("dsharp");
+            dsharpsound.load();
+        }
+        else if(key===68) {
+            console.log("pianokey e unpressed");
+            var lightupekey = document.getElementById("lightupEstyle");
+            lightupekey.style.display="none";
+            var hilightekey = document.getElementById("ehilight");
+            hilightekey.style.display="none";
+            var esound = document.getElementById("e");
+            esound.load();
+            
+        }
+        else if(key===70) {
+            console.log("pianokey f unpressed");
+            var lightupfkey = document.getElementById("lightupFstyle");
+            lightupfkey.style.display="none";
+            var hilightfkey = document.getElementById("fhilight");
+            hilightfkey.style.display="none";
+            var fsound = document.getElementById("f");
+            fsound.load();
+        }
+        else if(key===84) {
+            console.log("pianokey fsharp unpressed");
+            var lightupfsharpkey = document.getElementById("lightupFsharpstyle");
+            lightupfsharpkey.style.display="none";
+            var hilightfsharpkey = document.getElementById("fsharphilight");
+            hilightfsharpkey.style.display="none";
+            var fsharpsound = document.getElementById("fsharp");
+            fsharpsound.load();
+        }
+        else if(key===71) {
+            console.log("pianokey g unpressed");
+            var lightupgkey = document.getElementById("lightupGstyle");
+            lightupgkey.style.display="none";
+            var hilightthegkey = document.getElementById("ghilight");
+            hilightthegkey.style.display="none";
+            var gsound = document.getElementById("g");
+            gsound.load();
+            
+        }
+        else if(key===89) {
+            console.log("pianokey gsharp unpressed");
+            var lightupgsharpkey = document.getElementById("lightupGsharpstyle");
+            lightupgsharpkey.style.display="none";
+            var hilightgsharpkey = document.getElementById("gsharphilight");
+            hilightgsharpkey.style.display="none";
+            var gsharpsound = document.getElementById("gsharp");
+            gsharpsound.load();
+        }
+        else if(key===72) {
+            console.log("pianokey a unpressed");
+            var lightupakey = document.getElementById("lightupAstyle");
+            lightupakey.style.display="none";
+            var hilightakey = document.getElementById("ahilight");
+            hilightakey.style.display="none";
+            var asound = document.getElementById("a");
+            asound.load();
+        }
+        else if(key===85) {
+            console.log("pianokey asharp unpressed");
+            var lightupasharpkey = document.getElementById("lightupAsharpstyle");
+            lightupasharpkey.style.display="none";
+            var hilightasharpkey = document.getElementById("asharphilight");
+            hilightasharpkey.style.display="none";
+            var asharpsound = document.getElementById("asharp");
+            asharpsound.load();
+        }
+        else if(key===74) {
+            console.log("pianokey b unpressed");
+            var lightupbkey = document.getElementById("lightupBstyle");
+            lightupbkey.style.display="none";
+            var hilightbkey = document.getElementById("bhilight");
+            hilightbkey.style.display="none";
+            var bsound = document.getElementById("b");
+            bsound.load();
+        }
+}
+//key functions ^
+
+        
+
+    </script>
+</body>
+</html>
