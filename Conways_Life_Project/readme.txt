@@ -19,3 +19,4 @@ A way to view the simulation or record the progression of the cells
 
 It seems like given our starting parameters, the simulation eventually reaches a still-life, no matter the size of the grid or any other changing value other than the starting parameters
 
+I think there may be an issue with cell generation though, I'll fix it later. This is a WIP for now.
