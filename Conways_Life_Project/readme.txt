@@ -1,5 +1,5 @@
-The "Game of Life" was created by  a British mathematician in 1970, named John Horton Conway.
-It is meant to represent the creation and development of life in the form of cells.
+The "Game of Life" was created by a British mathematician in 1970, named John Horton Conway.
+It is meant to represent the creation, destruction and development of life in the form of cells.
 
 Every cell interacts with neighbors, cells which are horizontally, verically or diagonally adjacent to each other.
 Each cell has two possible states, alive or dead (populated or unpopulated)
