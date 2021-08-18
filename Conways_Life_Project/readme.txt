@@ -11,7 +11,7 @@ The rules are as follows:
 3) Any live cell with more than (over) three live neighbors will die "overpopulation"
 4) Any dead cell with exactly three neighbors, will become a live cell "reproduction"
 
-This program seeks to recreate that Conway's game of life. It has been done before and this is my own attempt.
+This program seeks to recreate Conway's game of life. It has been done before and this is my own attempt.
 
 For this we need an element defined in a perceivable space
 The above rules to change the state of this element in our simulation
