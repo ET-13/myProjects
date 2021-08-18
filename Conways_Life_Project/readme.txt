@@ -13,7 +13,7 @@ The rules are as follows:
 
 This program seeks to recreate Conway's game of life. It has been done before and this is my own attempt.
 
-For this we need an element defined in a perceivable space
+For this we need a space (grid) we can populate with elements
 The above rules to change the state of this element in our simulation
 A way to view the simulation or record the progression of the cells
 
