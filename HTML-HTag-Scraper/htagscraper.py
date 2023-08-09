@@ -10,8 +10,13 @@ headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleW
 
 print("Enter the website to scrape <h1> and <h2> tags from (enter the entirety of the url): ")
 inputurl = input()
-
 url = str(inputurl)
+
+print("What name would you like the .txt output to have? (no spaces): ")
+inputtxt = input()
+inputtxt = str(inputtxt)
+
+
 
 ##url = 'https://www.donaldjtrump.com/agenda47' ##Example URL, try this out if your input isnt working
 ##very funny h-tags... ; )
@@ -28,7 +33,7 @@ hdoc2 = soup.find_all('h2')
 print(hdoc1)
 print(hdoc2)
 
-with open('myhtags.txt', 'a') as f:
+with open(f'{inputtxt}.txt', 'a') as f:
     f.write(str(hdoc1))
     f.write(str(hdoc2))
 
