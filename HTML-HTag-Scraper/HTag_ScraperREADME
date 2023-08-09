@@ -1,0 +1,1 @@
+This program is simple but sweet. It takes a URL and scrapes the <h1> and <h2> tags from the given website. Afterward the information gets saved to the current working directory as a .txt file. Useful for small-scale data collection.
